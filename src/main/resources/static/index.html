@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oblig 1</title>
+  <script src="index.js"></script>
+</head>
+<body>
+
+<h1>Oblig 1 - stsla0672</h1>
+
+<table>
+  <tr>Velg film: <input type="text" name="film" list="movie"></tr>
+</table>
+
+<datalist id="movie">
+  <option value="Starwars">
+  <option value="Harry Potter">
+</datalist>
+
+<br>
+
+<table>
+  <tr>Antall <input id="antall" type="number" value=""/></tr>
+</table>
+
+<br>
+
+<table>
+  <tr><td>Fornavn</td> <td><input id="fornavn" type="text" value=""/></td></tr>
+  <tr><td>Etternavn</td> <td><input id="etternavn" type="text" value=""/></td></tr>
+  <tr><td>Telefonnr</td> <td><input id="telefon" type="text" value=""/></td></tr>
+  <tr><td>Epost</td> <td><input id="epost" type="text" value=""/></td></tr>
+  <tr><td><button onclick="kjopBillett()"> Kjøp Billett </button></td></tr>
+</table>
+
+<h2>Alle billettene</h2>
+<div id="vis"> </div>
+
+<br>
+
+<tr><td><button onclick="slett()">Slett billetter</button> </td></tr>
+
+
+</body>
+</html>
