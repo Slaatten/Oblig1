@@ -7,8 +7,29 @@ function kjopBillett() {
     let telefon = document.getElementById('telefon').value;
     let epost = document.getElementById('epost').value;
 
-    if (film === "" || antall === "" || fornavn === "" || etternavn === "" || telefon === "" || epost === ""){
-        alert("Alle felt må fylles ut");
+    if (film === ""){
+        alert("Velg en film");
+        return;
+    }
+    if (antall === "") {
+        alert("Velg antall billetter");
+        return;
+    }
+    if (fornavn === "") {
+        alert("Oppgi fornavn");
+        return;
+    }
+    if (etternavn === "") {
+        alert("Oppgi etternavn");
+        return;
+    }
+    if (telefon === "") {
+        alert("Oppgi et telefonnummer");
+        return;
+    }
+    if (epost === "") {
+        alert("Oppgi din epost");
+        return;
     }
 
     let billett = {
@@ -35,9 +56,9 @@ function visBilletter() {
     billetterDiv.innerHTML = "<h2>Alle billetter</h2>";
     for (let i = 0; i < array.length; i++) {
         let billett = array[i];
-        billetterDiv.innerHTML += "<p>Film: " + billett.film + "Antall: " +
-            billett.antall + "Fornavn: " + billett.fornavn + "Etternavn: " +
-            billett.etternavn + "Telefon: " + billett.telefon + "Epost: " +
+        billetterDiv.innerHTML += "<p>Film: " + billett.film + " Antall: " +
+            billett.antall + " Fornavn: " + billett.fornavn + " Etternavn: " +
+            billett.etternavn + " Telefon: " + billett.telefon + " Epost: " +
             billett.epost +
             "</p>"
     }
