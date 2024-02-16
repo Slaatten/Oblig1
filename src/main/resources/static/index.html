@@ -10,7 +10,9 @@
 <h1>Oblig 1 - stsla0672</h1>
 
 <table>
-  <tr>Velg film: <input type="text" name="film" list="movie"></tr>
+  <tr><td>Velg film:</td> <td><label>
+    <input type="text" name="film" list="movie">
+  </label></td></tr>
 </table>
 
 <datalist id="movie">
@@ -21,16 +23,18 @@
 <br>
 
 <table>
-  <tr>Antall <input id="antall" type="number" value=""/></tr>
+  <tr>
+    Antall <label for="antall"></label><input id="antall" type="number" value=""/>
+  </tr>
 </table>
 
 <br>
 
 <table>
-  <tr><td>Fornavn</td> <td><input id="fornavn" type="text" value=""/></td></tr>
-  <tr><td>Etternavn</td> <td><input id="etternavn" type="text" value=""/></td></tr>
-  <tr><td>Telefonnr</td> <td><input id="telefon" type="text" value=""/></td></tr>
-  <tr><td>Epost</td> <td><input id="epost" type="text" value=""/></td></tr>
+  <tr><td>Fornavn</td> <td><label for="fornavn"></label><input id="fornavn" type="text" value=""/></td></tr>
+  <tr><td>Etternavn</td> <td><label for="etternavn"></label><input id="etternavn" type="text" value=""/></td></tr>
+  <tr><td>Telefonnr</td> <td><label for="telefon"></label><input id="telefon" type="text" value=""/></td></tr>
+  <tr><td>Epost</td> <td><label for="epost"></label><input id="epost" type="text" value=""/></td></tr>
   <tr><td><button onclick="kjopBillett()"> Kjøp Billett </button></td></tr>
 </table>
 
@@ -39,8 +43,9 @@
 
 <br>
 
-<tr><td><button onclick="slett()">Slett billetter</button> </td></tr>
-
+<table>
+  <tr><td><button onclick="slett()">Slett billetter</button> </td></tr>
+</table>
 
 </body>
 </html>
