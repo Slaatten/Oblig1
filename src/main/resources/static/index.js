@@ -1,6 +1,6 @@
 let array = [];
 function kjopBillett() {
-    let film = document.querySelector('input[name=film]').value;
+    let film = document.getElementById('movie').value;
     let antall = document.getElementById('antall').value;
     let fornavn = document.getElementById('fornavn').value;
     let etternavn = document.getElementById('etternavn').value;
@@ -23,12 +23,15 @@ function kjopBillett() {
         alert("Oppgi etternavn");
         return;
     }
-    if (telefon === "") {
-        alert("Oppgi et telefonnummer");
+
+    let telefonRegex = /^\d{8}$/;
+    if (!telefonRegex.test(telefon)){
+        alert("Oppgi et gyldig telefonnummer");
         return;
     }
-    if (epost === "") {
-        alert("Oppgi din epost");
+    let epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!epostRegex.test(epost)){
+        alert("Oppgi en gyldig epostadresse");
         return;
     }
 
@@ -44,7 +47,7 @@ function kjopBillett() {
 
     visBilletter();
 
-    document.querySelector('input[name=film]').value = "";
+    document.getElementById('movie').value = "";
     document.getElementById('antall').value = "";
     document.getElementById('fornavn').value = "";
     document.getElementById('etternavn').value = "";
